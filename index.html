@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Font Demo</title>
+  <link href="main.css" rel="stylesheet">
+</head>
+<body>
+<div class="demo">
+  倒计时
+  <span class="count"> </span>
+</div>
+
+</body>
+<script>
+var count = document.querySelector(".demo .count");
+var update = () => {
+  count.innerHTML = 100 + Math.floor(Math.random() * 900);
+  setTimeout(update, 200);
+};
+setTimeout(update);
+</script>
+</html>
